@@ -31,10 +31,10 @@ So:
 A string labelled "friendsName" with the value "friend.name" _could_ be resolved using eval:
 
     var friendsName = "friend.name";
-    
+
     eval("bob." + friendsName);     // returns "alice"
 
-But where and how _friendsName_ is set could cause problems for this code in future. If the string were single-depth (e.g. "name" then it could easily be resolved by :
+But where and how _friendsName_ is set could cause problems for this code in future. If the string were single-depth (e.g. "name") then it could easily be resolved by :
 
     bob["name"];                    // equivilent to bob.name
 
@@ -46,4 +46,6 @@ JSResolve resolves this:
 
     jsresolve(bob, friendsName);    // returns "alice"
 
-Anything that can't be resolved returns _undefined_. That's it. Simple.
+Anything that can't be resolved returns _undefined_.  
+
+That's it. Simple.  
